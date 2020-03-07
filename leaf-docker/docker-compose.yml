@@ -2,6 +2,7 @@ version: '3.1'
 services:
   leaf-server:
     image: leaf-server
+    restart: always
     container_name: leaf-server
     ports:
       - 8080:8080
@@ -13,6 +14,7 @@ services:
 
   leaf-zookeeper:
     image: zookeeper:3.4
+    restart: always
     container_name: leaf-zookeeper
     hostname: leaf-zookeeper
     ports:
